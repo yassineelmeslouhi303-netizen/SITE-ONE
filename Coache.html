@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p><a href="index.html"> CLUB RYAD AL HAMD</a></p>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="sevicees.html">service</a>
+            <a href="Coache.html">Coach</a>
+            <a href="#">Abonnement</a>
+            <a href="#">Contact</a>
+            <a href="#">connexion</a>
+        </nav>
+    </header>
+    <main>
+        <section class="coachs">
+            <h2>Nos Coachs</h2>
+
+            <div class="coachs-container" id="profileModal" class="modal">
+
+                <div class="coach-card" class="modal-content">
+                    <span class="close" onclick="fermerProfil">&times;</span>
+                    <img src="" alt="image">
+                    <h3>Coach Kung-fu</h3>
+                    <p>Spécialiste des arts martiaux et des techniques de Kung-fu.</p>
+                    <p><strong>Expérience :</strong> 8 ans</p>
+                    <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
+                </div>
+
+                <div class="coach-card" class="modal-content">
+                    <span class="close" onclick="fermerProfil">&times;</span>
+                    <img src="" alt="image">
+                    <h3>Coach Boxe</h3>
+                    <p>Entraînement technique, endurance et préparation physique.</p>
+                    <p><strong>Expérience :</strong> 6 ans</p>
+                    <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
+                </div>
+
+                <div class="coach-card" class="modal-content">
+                    <span class="close" onclick="fermerProfil">&times;</span>
+                    <img src="" alt="image">
+                    <h3>Coach Judo</h3>
+                    <p>Apprentissage des techniques de projection et de contrôle.</p>
+                    <p><strong>Expérience :</strong> 7 ans</p>
+                    <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>RIADE EL HAMDE</h3>
+
+        <p>Club des arts martiaux</p>
+
+        <p>© 2026 RIADE EL HAMDE - Tous droits réservés</p>
+   </footer>
+   <script src="script.js"></script>
+</body>
+</html>
