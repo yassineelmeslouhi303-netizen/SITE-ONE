@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
@@ -13,42 +13,39 @@
             <a href="index.html">Accueil</a>
             <a href="sevicees.html">service</a>
             <a href="Coache.html">Coach</a>
-            <a href="#">Abonnement</a>
-            <a href="#">Contact</a>
-            <a href="#">connexion</a>
+            <a href="Abonnement.html">Abonnement</a>
+            
+            <a href="connexion.html">connexion</a>
         </nav>
     </header>
     <main>
         <section class="coachs">
-            <h2>Nos Coachs</h2>
+            <h1>Nos Coachs</h1>
 
-            <div class="coachs-container" id="profileModal" class="modal">
-
-                <div class="coach-card" class="modal-content">
-                    <span class="close" onclick="fermerProfil">&times;</span>
+            <div class="coachs-container" >
+<!---Coche kung-fu-->
+                <div class="coach-card"  >
                     <img src="" alt="image">
-                    <h3>Coach Kung-fu</h3>
-                    <p>Spécialiste des arts martiaux et des techniques de Kung-fu.</p>
+                    <h3 >Coach Kung-fu</h3>
+                    <p >Spécialiste des arts martiaux et des techniques de Kung-fu.</p>
                     <p><strong>Expérience :</strong> 8 ans</p>
                     <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
                 </div>
-
-                <div class="coach-card" class="modal-content">
-                    <span class="close" onclick="fermerProfil">&times;</span>
+<!---Coche boxe-->
+                <div class="coach-card"  >
                     <img src="" alt="image">
-                    <h3>Coach Boxe</h3>
-                    <p>Entraînement technique, endurance et préparation physique.</p>
+                    <h3 >Coach Boxe</h3>
+                    <p >Entraînement technique, endurance et préparation physique.</p>
                     <p><strong>Expérience :</strong> 6 ans</p>
-                    <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
+                    <button onclick="ouvrirProfil('boxe')">Voir le profile</button>
                 </div>
-
-                <div class="coach-card" class="modal-content">
-                    <span class="close" onclick="fermerProfil">&times;</span>
+<!---Coche judo-->
+                <div class="coach-card"  >
                     <img src="" alt="image">
-                    <h3>Coach Judo</h3>
-                    <p>Apprentissage des techniques de projection et de contrôle.</p>
+                    <h3 >Coach Judo</h3>
+                    <p >Apprentissage des techniques de projection et de contrôle.</p>
                     <p><strong>Expérience :</strong> 7 ans</p>
-                    <button onclick="ouvrirProfil('kungfu')">Voir le profile</button>
+                    <button onclick="ouvrirProfil('judo')">Voir le profile</button>
                 </div>
 
             </div>
@@ -62,6 +59,16 @@
 
         <p>© 2026 RIADE EL HAMDE - Tous droits réservés</p>
    </footer>
-   <script src="script.js"></script>
+  
+    <div class="modal" id="profileModal">
+        <div class="modal-content">
+            <span class="close" onclick="fermerProfil()">&times;</span>
+            <h2 id="profileName"></h2>
+            <p id="profileInfo"></p>
+            <p id="profileExperience"></p>
+            <button onclick="fermerProfil()">fermer</button>
+        </div>
+    </div>
+   <script src="js/script.js"></script>
 </body>
 </html>

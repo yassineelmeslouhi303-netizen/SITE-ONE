@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: 
+  linear-gradient(rgb(0 0 255 / 0.5), rgba(0, 0, 0, 0.5)),
+  url('mage/kungfu.jpg');;
+}
+header p{
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+header p a{
+    text-decoration: none;
+}
+header p a:hover{
+    color: blue;
+}
+nav {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+main {
+    padding: 40px;
+}
+section {
+    margin-bottom: 40px;
+}
+section img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit:none ;
+}
+video {
+    width: 450px;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+@media (max-width: 768px) {
+    section img {
+        width: 100%;
+        height: auto;
+    }
+}
+.hero{
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url("../images/salle1.jpeg");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px
+}
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.hero a {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+}
+.hero a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+disciplines {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.disciplines h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+   
+    width: 220px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    background-image: url("mage/kungfu.jpg");
+    background-size: cover;   
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-bottom: 8px;
+}
+.services {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.service-card {
+   background: white;
+    width: 250px;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+.coachs {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.coachs h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.coachs-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.coach-card {
+    width: 250px;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background: white;
+}
+
+.coach-card h3 {
+    margin-bottom: 15px;
+}
+
+.coach-card p {
+    line-height: 1.6;
+}
+.coach-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+}
+
+.coach-card:hover img {
+    transform: scale(1.08);
+    transition: 0.3s;
+}
+
+.coach-card strong {
+    display: block;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .coachs-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coach-card {
+        width: 85%;
+    }
+}
+.coach-card button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.coach-card button:hover {
+    background: #555;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 400px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.modal-content button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.abonnements {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.abonnements h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.abonnements-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.abonnement-card {
+    width: 280px;
+    padding: 30px 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.abonnement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.abonnement-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.abonnement-card .prix {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.abonnement-card p {
+    margin: 10px 0;
+}
+
+.abonnement-card strong {
+    display: block;
+    margin-top: 20px;
+}
+
+.abonnement-card button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.abonnement-card button:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+
+    .abonnements-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abonnement-card {
+        width: 85%;
+    }
+}
+inscription {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.inscription h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.inscription form {
+    width: 450px;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.inscription label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inscription input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.inscription button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.inscription button:hover {
+    background: #555;
+}
+connexion {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.connexion h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.connexion form {
+    width: 400px;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.connexion label {
+    display: block;
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.connexion input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.connexion button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.connexion button:hover {
+    background: #555;
+}
+
+#messageConnexion {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.inscription-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.inscription-container h1 {
+    color: green;
+    margin-bottom: 25px;
+}
+
+.inscription-info {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.inscription-info p {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.inscription-container .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.inscription-container .btn:hover {
+    background: #333;
+}
+.vedio{
+   height: 20%;
+    width: 40%;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.inscription-container {
+    width: 90%;
+    max-width: 550px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.inscription-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.inscription-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.inscription-container input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.inscription-container input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.inscription-info {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 10px;
+}
+
+.inscription-info p {
+    margin: 10px 0;
+}
+
+.inscription-container button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.inscription-container button:hover {
+    background: #444;
+}
+
+/* Téléphone */
+@media (max-width: 600px) {
+
+    .inscription-container {
+        width: 85%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+
+    .inscription-container h1 {
+        font-size: 25px;
+    }
+}

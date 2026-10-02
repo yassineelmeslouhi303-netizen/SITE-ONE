@@ -54,7 +54,7 @@ function ouvrirProfil(type) {
         document.getElementById("profileName").textContent = "Coach Kung-fu";
         document.getElementById("profileInfo").textContent =
             "Spécialiste des arts martiaux et des techniques de Kung-fu.";
-        document.getElementById("profileExpérience").textContent =
+        document.getElementById("profileExperience").textContent =
             "Expérience : 8 ans";
     }
 
@@ -62,7 +62,7 @@ function ouvrirProfil(type) {
         document.getElementById("profileName").textContent = "Coach Boxe";
         document.getElementById("profileInfo").textContent =
             "Entraînement technique, endurance et préparation physique.";
-        document.getElementById("profileExpérience").textContent =
+        document.getElementById("profileExperience").textContent =
             "Expérience : 6 ans";
     }
 
@@ -70,13 +70,57 @@ function ouvrirProfil(type) {
         document.getElementById("profileName").textContent = "Coach Judo";
         document.getElementById("profileInfo").textContent =
             "Apprentissage des techniques de projection et de contrôle.";
-        document.getElementById("profileExpérience").textContent =
+        document.getElementById("profileExperience").textContent =
             "Expérience : 7 ans";
     }
 
     modal.style.display = "flex";
 }
 
-function fermerProfil() {
-    document.getElementById("profileModal").style.display = "none";
+// function fermerProfil() {
+//     document.getElementById("profileModal").style.display = "none";
+// }
+
+
+
+//    FONCTION DE INSCRIPTION
+function inscription(duree, prix, assurance) {
+
+    let total = prix + assurance;
+
+    document.getElementById("abonnementChoisi").value =
+        duree + " - " + prix + " DH";
+
+    document.getElementById("totalInscription").value =
+        total + " DH";
+
+    document.getElementById("inscription").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+const connexionForm = document.getElementById("connexionForm");
+
+if (connexionForm) {
+
+    connexionForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let message = document.getElementById("messageConnexion");
+
+        if (email === "" || password === "") {
+
+            message.textContent = "Veuillez remplir tous les champs.";
+            message.style='color:red'
+
+        } else {
+
+            message.textContent = "Connexion réussie !";
+            message.style='color:green'
+        }
+
+    });
+
 }
