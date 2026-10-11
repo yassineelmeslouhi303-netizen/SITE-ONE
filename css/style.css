@@ -6,24 +6,28 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-image: linear-gradient(to bottom,#000000 0%, #254da3 100%), url();
+    
 }
 header {
-    padding: 20px;
+    padding: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-  
+    border-radius: 20px;
+    background: linear-gradient(135deg, #1e36bb, #f2f3f5);
 }
 header p{
     font-size: 40px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 header p a{
     text-decoration: none;
+    color: #03183b;
 }
 header p a:hover{
-    color: blue;
+    color: rgb(0, 0, 0);
+    
 }
 nav {
     display: flex;
@@ -32,12 +36,22 @@ nav {
 nav a {
     text-decoration: none;
     color: black;
+    transition: 0.3s;
+    
+}
+nav a:hover {
+    transform: scale(1.05);
+    text-decoration: underline;
+    background-color: rgba(201, 214, 14, 0.534);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 main {
     padding: 40px;
 }
 section {
     margin-bottom: 40px;
+    color: white;
 }
 section img {
     width: 500px;
@@ -55,7 +69,7 @@ section img {
 .hero-video video {
     width: 100%;
     height: 100%;
-    object-fit:none ;
+    object-fit:none;
 }
 video {
     width: 450px;
@@ -75,7 +89,7 @@ video {
 .hero{
     text-align: center;
     padding: 80px 20px;
-    background-image: url("../images/salle1.jpeg");
+    background-image: url("");
     background-size: cover;
     background-position: center;
     min-height: 400px
@@ -83,10 +97,13 @@ video {
 .hero h2 {
     font-size: 40px;
     margin-bottom: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .hero p {
     font-size: 20px;
     margin-bottom: 30px;
+    color: white;
 }
 .hero a {
     display: inline-block;
@@ -101,7 +118,7 @@ video {
     transform: scale(1.05);
     text-decoration: underline;
 }
-disciplines {
+.disciplines {
     text-align: center;
     padding: 50px 20px;
 }
@@ -109,6 +126,7 @@ disciplines {
 .disciplines h2 {
     font-size: 32px;
     margin-bottom: 30px;
+    color: white;
 }
 
 .cards {
@@ -116,35 +134,119 @@ disciplines {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    background-color: black;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    border: 1px solid black;
+    background: linear-gradient(135deg,#0a23af,#03183b);
+
 }
 
 .card {
    
     width: 220px;
-    padding: 25px;
+    padding: 15px;
     border: 1px solid #ddd;
     border-radius: 10px;
     transition: 0.3s;
 
-    background-image: url("mage/kungfu.jpg");
+    background-image: url();
     background-size: cover;   
     background-position: center;  
     background-repeat: no-repeat; 
+    animation: entrerCard 1.5s ease-out,
+               mouvement 3s ease-in-out 1.5s infinite;
+}
+@keyframes entrezCard {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 .card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform:matrix3d(13px);
+    box-shadow: 0 10px 20px rgba(148, 5, 5, 0.5);
+    background:linear-gradient(to bottom,#03183b,#48858a);
+    transform: scale(1.04);
 }
 
 .card h3 {
     margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+}
+section img {
+    width: 40%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+}
+
+/* الصورة الأولى تدخل من اليسار */
+section img:nth-of-type(1) {
+    animation: entrerGauche 1.5s ease-out,
+               mouvement 3s ease-in-out 1.5s infinite;
+}
+
+/* الصورة الثانية تدخل من اليمين */
+section img:nth-of-type(2) {
+    animation: entrerDroite 1.5s ease-out,
+               mouvement 3s ease-in-out 1.5s infinite;
+}
+
+/* الدخول من اليسار */
+@keyframes entrerGauche {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* الدخول من اليمين */
+@keyframes entrerDroite {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* حركة مستمرة وخفيفة */
+@keyframes mouvement {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* تكبير بسيط عند مرور الفأرة */
+section img:hover {
+    transform: scale(1.04);
 }
 footer {
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
+    padding: 39px 20px;
+    margin-top: 37px;
     background-color: black;
     color: white;
+    display: flex;
+    justify-content: center;
+    gap: 110px;
+    font-size: 12px;
 }
 
 footer h3 {
@@ -152,7 +254,7 @@ footer h3 {
 }
 
 footer p {
-    margin-bottom: 8px;
+    padding: auto;
 }
 .services {
     padding: 60px 8%;
@@ -183,10 +285,12 @@ footer p {
 
 .service-card h3 {
     margin-bottom: 15px;
+    color: black;
 }
 
 .service-card p {
     line-height: 1.6;
+    color: black;
 }
 .coachs {
     padding: 60px 8%;
@@ -216,10 +320,12 @@ footer p {
 
 .coach-card h3 {
     margin-bottom: 15px;
+    color: #000000;
 }
 
 .coach-card p {
     line-height: 1.6;
+    color: #000000;
 }
 .coach-card img {
     width: 120px;
@@ -349,16 +455,21 @@ footer p {
 .abonnement-card h3 {
     font-size: 24px;
     margin-bottom: 15px;
+    color: #000000;
 }
 
 .abonnement-card .prix {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 .abonnement-card p {
     margin: 10px 0;
+    color: #000000;
+    font-size: 19px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifj;
 }
 
 .abonnement-card strong {
@@ -392,7 +503,7 @@ footer p {
         width: 85%;
     }
 }
-inscription {
+.inscription {
     padding: 60px 8%;
     text-align: center;
 }
@@ -544,7 +655,6 @@ connexion {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
 }
 
 .inscription-container {
