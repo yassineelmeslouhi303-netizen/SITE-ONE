@@ -14,7 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    background: linear-gradient(135deg, #1e36bb, #f2f3f5);
+    background: linear-gradient(135deg, #1e35bb00, #f2f3f500);
 }
 header p{
     font-size: 40px;
@@ -25,7 +25,7 @@ header p a{
     color: #03183b;
 }
 header p a:hover{
-    color: rgb(0, 0, 0);
+    color: rgb(2, 4, 107);
     
 }
 nav {
@@ -34,7 +34,7 @@ nav {
 }
 nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     transition: 0.3s;
     
 }
@@ -477,6 +477,9 @@ footer p {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    border: 1px solid #c11a1a;
+    border-top-left-radius: 142px;
+    border-bottom-right-radius: 142px;
     gap: 30px;
     flex-wrap: wrap;
 }
@@ -487,7 +490,7 @@ footer p {
     border: 1px solid #ddd;
     border-radius: 15px;
     background: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(56, 19, 19, 0.603);
     background-image: url(https://wallpapercave.com/wp/wp6662281.jpg);
     background-size: cover;
     transition: 0.3s;
@@ -495,7 +498,7 @@ footer p {
 
 .abonnement-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgb(185, 5, 5);
 }
 
 .abonnement-card h3 {
