@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to bottom,#000000 0%, #254da3 100%), url(../mage/kungfucards.webp);
+    background-image: linear-gradient(to bottom,#000000 0%, #254da34d 100%), url(../mage/kungfucards.webp);
     
 }
 header {
@@ -302,6 +302,8 @@ footer p {
     width: 250px;
     padding: 25px;
     border: 1px solid #ccc;
+    background-image: url(https://wallpapercave.com/wp/wp6662281.jpg);
+    background-size: cover;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 1s ease
@@ -486,6 +488,8 @@ footer p {
     border-radius: 15px;
     background: white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-image: url(https://wallpapercave.com/wp/wp6662281.jpg);
+    background-size: cover;
     transition: 0.3s;
 }
 
